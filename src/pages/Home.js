@@ -14,7 +14,7 @@ const Home = () => {
   socket.emit('message',message)
   const newMessage={
     body:message,
-    from : "yo "
+    from :'yo'
   }
   setMessages([newMessage,...messages])
   setMessage("")
@@ -40,7 +40,7 @@ return  ()=>{
 
 <ul className='h-80 overflow-y-auto'>
 {messages.map((message,index)=>(
-<li key={index} className={`my-2 p-2 text-sm table rounded-md ${message.from === 'yo'? "bg-sky-700 ml-auto":"bg-black"}`}>
+<li key={index} className={`my-2 p-2 text-sm table rounded-md ${message.from === 'yo'?  "bg-sky-700  ml-auto":"bg-black"}`}>
   <p>{message.from}:{message.body}</p>
 </li>
 
